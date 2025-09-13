@@ -1,0 +1,68 @@
+/* Basic nav styling */
+nav {
+    padding: 1rem;
+    position: relative;
+}
+
+/* Hamburger icon styling - हमेशा दिखना है */
+#hamburger {
+    color: black;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: block;
+    z-index: 1000; /* Navbar ke upar dikhana */
+    
+}
+
+/* Navbar - हमेशा छुपा रहना है initially */
+#Navbar {
+    list-style: none;
+    margin: 0;
+    padding: 2rem 1rem;
+    position: fixed;
+    top: 0;
+    right: -300px; /* Completely screen ke bahar छुपा हुआ */
+    width: 250px;
+    height: 100vh;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: right 0.3s ease;
+    z-index: 999;
+}
+
+/* Cross icon styling - hamburger जैसी ही position */
+#cross {
+    color: white;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    z-index: 1000;
+}
+
+
+#Navbar li {
+    margin-bottom: 1rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Click करने पर navbar slide करके आएगा */
+#Navbar.show {
+    right: 0;
+}
+
+#Navbar.Cross{
+    color: black;
+    font-size: 1.5rem;
+}
