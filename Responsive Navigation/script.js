@@ -9,7 +9,7 @@ hamburger.addEventListener('click', function() {
 });
 
 cross.addEventListener('click', function() {
-    navbar.classList.remove('show'); // Navbar बंद करना
-    cross.style.display = 'none'; // Cross छुपाना
-    hamburger.style.display = 'block'; // Hamburger वापस दिखाना
+    navbar.classList.remove('show'); // For nav bar closing 
+    cross.style.display = 'none'; // For cross icon closing 
+    hamburger.style.display = 'block'; // for hamburger show again
 });
