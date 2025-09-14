@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+
+
+.text-symbol{
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    cursor: vertical-text;
+}
+#pintaskicon{
+    margin-left: 10px;
+    font-size: 24px;
+    text-align: center;
+    margin-top: auto;
+}
+
+#pintaskicon:hover{
+    color: yellowgreen;
+}
+
+#text{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#text:hover{
+    color: yellowgreen;
+}
+
+.mainApp{
+    text-align: center;
+    margin-top: 40px;
+    width: 500px;
+    height: 500px;
+    background-color: black;
+    align-items: center;
+    border-radius: 20px;
+
+}
+
+#input{
+    padding: 7px;
+    width: 40%;
+    color: white;
+    border-radius: 7px;
+    margin-top: 50px;
+}
+
+#Addbtn{
+    padding: 7px;
+    width: 70px;
+    background-color: greenyellow;
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+#Addbtn:hover{
+   background-color: rgb(93, 163, 22);
+   color: white;
+}
+
+
+#tasklist{
+    text-align: center;
+    align-items: center;
+    margin-top: 10%;
+    background-color: black;
+}
+
+li{
+  
+    color: white;
+    font-size: larger;
+    background-color: black;
+    list-style: circle;
+    margin-top: 5px;
+
+
+}
+
+li:hover{
+    text-decoration: line-through;
+}
