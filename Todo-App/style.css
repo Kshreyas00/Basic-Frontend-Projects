@@ -84,5 +84,10 @@ li{
 }
 
 li:hover{
-    text-decoration: line-through;
+    cursor: pointer;
+}
+
+li button{
+    background-color: greenyellow;
+    margin: 10px;
 }
