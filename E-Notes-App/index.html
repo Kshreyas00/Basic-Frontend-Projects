@@ -3,11 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Notes.io</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>E- Notes App</h1>
+      
+    <div class="container">
+        <h1>My Notes App</h1>
+
+        <div class="input-section">
+            <input type="text" id="noteTitle" placeholder="Enter a Note Title">
+            <textarea placeholder="Write your note here.." id="noteContent"></textarea>
+            <button id="addNoteBtn">Add Note</button>
+        </div>
+
+        <div class="notes-section">
+            <h2>Your Notes</h2>
+            <div id="notesContainer">
+                <!-- notes will be apper here -->
+            </div>
+        </div>
+    </div>
 
 
 
