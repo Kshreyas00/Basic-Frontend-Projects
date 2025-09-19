@@ -1,49 +1,48 @@
-const addbutton = document.getElementById("Addbtn");
-const input   = document.getElementById("input");
-const tasklist = document.getElementById("tasklist");
+const Addbutton = document.getElementById("Add");
+const input    = document.getElementById("input");
+const taskList  = document.getElementById("task-list");
 
 
-addbutton.addEventListener("click",function(){
-  const li = document.createElement("li");
-  li.textContent = input.value.trim();
+Addbutton.addEventListener("click",function(){
+    if(input.value===''){
+        alert("Please Enter Your Task");
+    }
 
-  const donebtn = document.createElement("button");
-  const deletebtn = document.createElement("button");
+    const li = document.createElement("li");
+    const donebutton = document.createElement("button");
+    const deletebutton = document.createElement("button");
 
-  donebtn.textContent = "Done";
-  deletebtn.textContent = "Delete";
+    const btnwrapperdiv = document.createElement('div');
+    btnwrapperdiv.style.display = "flex";
+    btnwrapperdiv.style.gap = "10px";
 
-  donebtn.id = "donebutton";
-  deletebtn.id = "deletedutton";
+    donebutton.id = 'Donebtn';
+    deletebutton.id = 'Delbtn';
 
-   li.appendChild(donebtn);
-   li.appendChild(deletebtn);
-
-
-  tasklist.appendChild(li);
-
+    donebutton.textContent = 'Done';
+    deletebutton.textContent = 'Delete';
 
 
-   
 
-  li.addEventListener("click",function(){
+    li.textContent = input.value.trim();
+    btnwrapperdiv.appendChild(donebutton);
+    btnwrapperdiv.appendChild(deletebutton);
     
-      donebtn.addEventListener("click",function(){
-      li.style.textDecoration = 'line-through';
-      li.style.color = "yellowgreen";
-
-      deletebtn.addEventListener("click",function(){
-        li.style.backgroundColor = "red";
-        alert("If you want to delete this task");
-        li.remove();
-      })
-
-    
-  })
-
-  })
+    li.appendChild(btnwrapperdiv);
 
 
-  input.value = '';
-   
+    donebutton.addEventListener("click",function(){
+      li.style.textDecoration = "line-through";
+    })
+
+
+
+    taskList.appendChild(li);
+
+
+    input.value = '';
+
+
 })
+
+

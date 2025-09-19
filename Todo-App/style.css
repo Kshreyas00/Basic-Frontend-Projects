@@ -1,93 +1,117 @@
 *{
     margin: 0;
     padding: 0;
-    background-color: #333;
 }
 
-
-.text-symbol{
-    text-align: center;
-    color: white;
+body{
     display: flex;
+    flex-direction: column;
+    height: 100vh;
     justify-content: center;
-    margin-top: 50px;
-    cursor: vertical-text;
-}
-#pintaskicon{
-    margin-left: 10px;
-    font-size: 24px;
-    text-align: center;
-    margin-top: auto;
-}
-
-#pintaskicon:hover{
-    color: yellowgreen;
-}
-
-#text{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-#text:hover{
-    color: yellowgreen;
-}
-
-.mainApp{
-    text-align: center;
-    margin-top: 40px;
-    width: 500px;
-    height: 500px;
-    background-color: black;
     align-items: center;
-    border-radius: 20px;
-
 }
 
+.input-wrapper{
+   margin-bottom: 10px;
+   padding: 10px;
+
+}
 #input{
-    padding: 7px;
-    width: 40%;
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+#input:focus{
+    border-color: #666;
+}
+
+#Add{
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #333;
     color: white;
-    border-radius: 7px;
-    margin-top: 50px;
-}
-
-#Addbtn{
-    padding: 7px;
-    width: 70px;
-    background-color: greenyellow;
     border: none;
-    border-radius: 7px;
-    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+
 }
-
-#Addbtn:hover{
-   background-color: rgb(93, 163, 22);
-   color: white;
+#Add:hover{
+    background-color: #555;
 }
-
-
-#tasklist{
+.todo-app{
+    width: 500px;
+    height: 300px;
     text-align: center;
-    align-items: center;
-    margin-top: 10%;
-    background-color: black;
+    border: 1px solid black;
+    /* overflow-y: auto; */
+    border-radius: 10px;
+  
 }
+
+
+
+.maintext{
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#task-list{
+ width: 100%;
+ height: 220px;
+ overflow-y: auto;
+ padding: 0;
+ margin: 0;
+
+}
+
+#Donebtn{
+    background-color: orangered;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    padding: 5px 10px;
+}
+#Delbtn{
+    background-color: orangered;
+    border: none;
+    border-radius: 3px;
+    color: white;
+
+    padding: 5px 10px;
+}
+
+#task-list::-webkit-scrollbar{
+    width: 8px;
+
+}
+
 
 li{
-  
-    color: white;
-    font-size: larger;
+    /* width: 100%; */
+    /* text-align: center; */
+    list-style: none;
+    padding: 10px;
+    margin: 10px 0;
     background-color: black;
-    list-style: circle;
-    margin-top: 5px;
-
-
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-li:hover{
-    cursor: pointer;
+
+li > div{
+    margin-left: auto;
 }
 
 li button{
-    background-color: greenyellow;
-    margin: 10px;
+    margin-left: 10px;
 }
