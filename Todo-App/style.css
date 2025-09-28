@@ -124,10 +124,11 @@ li button:hover{
     display: flex;
     justify-content: space-around;
     padding: 15px;
-    background-color: #8888;
-    border-top: 2px solid black;
+    background-color: rgb(0, 0, 0);
+    border-top: 5px solid orangered;
     border-radius: 0 0 10px 10px;
     margin-top: 10px;
+    color: white;
 
 }
 
@@ -137,4 +138,60 @@ li button:hover{
     align-items: center;
     font-size: 16px;
     font-weight: bold;
+}
+
+#completed-count{
+    color: #28a745;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #d4edda;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+
+#pending-count{
+    color: #dc3545;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #f8d7da;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+
+
+@media screen and (max-width: 480px) {
+    .maintext h1 {
+        font-size: 24px;
+    }
+    
+    .maintext p {
+        font-size: 14px;
+    }
+    
+    #input {
+        width: 180px;
+        padding: 8px;
+    }
+    
+    #Add {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+    
+    li {
+        font-size: 14px;
+        padding: 8px;
+    }
+    
+    #Donebtn, #Delbtn {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+    
+    #completed-count, #pending-count {
+        font-size: 18px;
+        padding: 6px 12px;
+    }
 }

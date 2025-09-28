@@ -3,6 +3,9 @@ const input    = document.getElementById("input");
 const taskList  = document.getElementById("task-list");
 
 
+const completecountele = document.getElementById("completed-count");
+const pendingCountele  = document.getElementById("pending-count");
+
 
 
 function UpdateTaskCount()
@@ -19,6 +22,9 @@ function UpdateTaskCount()
       pendingCount++;
     }
   })
+
+  completecountele.textContent = completeCount;
+  pendingCountele.textContent = pendingCount;
 
    console.log(`Completed: ${completeCount}, Pending: ${pendingCount}`);
 }
@@ -66,11 +72,13 @@ Addbutton.addEventListener("click",function(){
    })
 
    deletebutton.addEventListener("click",function(){
-      alert("Are you confirm to delete this todo.");
-      li.remove();
-
-      UpdateTaskCount();
-    })
+      const confirmdelete = confirm("Are you sure to delete this todo?");
+      
+      if(confirmdelete){
+        li.remove();
+        UpdateTaskCount();
+      }
+});
 
     taskList.appendChild(li);
 
@@ -81,3 +89,11 @@ Addbutton.addEventListener("click",function(){
 })
 
 
+
+
+input.addEventListener("keypress",function(e){
+  if(e.key==="Enter"){
+    Addbutton.click();
+  }
+
+})
