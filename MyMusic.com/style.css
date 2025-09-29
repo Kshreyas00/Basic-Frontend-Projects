@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a2e;
+    color: #e94560; /* Neon Pink Accent */
+    font-family: Arial, sans-serif;
+}
+
+.app {
+    width: 400px;
+    min-height: 300px;
+    border: 1px solid #e94560;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(233, 69, 96, 0.5);
+    /* background-color: #1a1a2e; */
+}
+
+#inputsong {
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    border: 2px solid #e94560;
+    outline: none;
+    margin-bottom: 15px;
+    width: 80%;
+    background-color: #0f172a; /* Dark Navy Input BG */
+    color: #e94560;
+    font-weight: bold;
+}
+
+#inputsong::placeholder {
+    color: #888;
+}
+
+button {
+    background-color: #e94560; /* Neon Pink */
+    color: #1a1a2e; /* Dark Contrast */
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px #e94560, 0 0 20px #e94560;
+}
+
+button:hover {
+    background-color: #ff5f79;
+    box-shadow: 0 0 20px #ff5f79, 0 0 40px #ff5f79;
+    transform: scale(1.05);
+    color: white;
+}
+
+button:active {
+    transform: scale(0.95);
+}
