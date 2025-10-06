@@ -1,37 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes.io</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Notes-App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-      
-    <div class="container">
-        <h1>My Notes App</h1>
+  <div class="Notesapp">
 
-        <div class="input-section">
-            <input type="text" id="noteTitle" placeholder="Enter a Note Title">
-            <textarea placeholder="Write your note here.." id="noteContent"></textarea>
-            <button id="addNoteBtn">Add Note</button>
-        </div>
+    <div class="NotesNav">
 
-        <div class="notes-section">
-            <h2>Your Notes</h2>
-            <div id="notesContainer">
-                <!-- notes will be apper here -->
-            </div>
-        </div>
+      <div class="Nav-header">
+        <h1>My Notes</h1>
+      </div>
+
+      <div class="Notes-list">
+        <!-- Notes title will apper here  -->
+      </div>
+
     </div>
 
 
+    <div class="notescontrol">
+
+      <div class="notesbtnandtittle">
+         <input type="text" placeholder="Enter Notes Title" id="notestitle">
+          <textarea id="notecontent" placeholder="Enter the note "></textarea>
+         <button id="Addnotebtn">Add Note</button>
+      </div>
 
 
+      <div class="notesdiv">
+        <div class="displaynotes" id="displaynote">
+          <p>Select a note</p>   
+        </div>
+      </div>
+    </div>
 
 
+  </div>
 
 
-    <script src="script.js"></script>
+  <script src="Testing.js"></script>
+  
 </body>
 </html>
