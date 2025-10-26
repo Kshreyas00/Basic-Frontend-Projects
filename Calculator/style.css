@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.calApp{
+ text-align: center;
+ background-color: white;
+ padding: 20px;
+ border-radius: 10px;
+} 
+
+button{
+    padding: 5px;
+    margin-top: 20px;
+    font-size: larger;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+#display{
+    font-size: large;
+    border-radius: 4px;
+    text-align: center;
+}

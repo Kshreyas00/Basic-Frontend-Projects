@@ -1,0 +1,4 @@
+Step 1: Add a data attribute to track task status
+When you create each li element, you need to add a data-status attribute to track whether the task is "pending" or "completed". Set the default status as "pending" when creating new tasks.
+Add a line after creating the li element where you set: li.setAttribute("data-status", "pending") - this will help you identify and manage the task status later.
+Complete this step first and let me know when done!
