@@ -1,0 +1,285 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('Assets/bg-app.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    position: relative;
+}
+
+/* Corner lights effect - Crimson Red */
+body::before {
+    content: '';
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: 
+        radial-gradient(circle at 10% 10%, rgba(220, 20, 60, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 90% 10%, rgba(220, 20, 60, 0.25) 0%, transparent 50%),
+        radial-gradient(circle at 10% 90%, rgba(220, 20, 60, 0.25) 0%, transparent 50%),
+        radial-gradient(circle at 90% 90%, rgba(220, 20, 60, 0.3) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+body > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Motivational Message - Right Side with Green Background */
+#Motivation-Message {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(34, 197, 94, 0.95);
+    backdrop-filter: blur(10px);
+    color: black;
+    padding: 20px 25px;
+    border-radius: 15px;
+    max-width: 300px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Comic Sans MS', 'Courier New', cursive, monospace;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(34, 197, 94, 0.5);
+    line-height: 1.6;
+    text-align: center;
+    animation: slideInRight 0.5s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        right: -400px;
+        opacity: 0;
+    }
+    to {
+        right: 20px;
+        opacity: 1;
+    }
+}
+
+/* Timer App Container - White Background */
+.Timerapp {
+    width: 90%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 
+                0 0 100px rgba(220, 20, 60, 0.2);
+    border: 2px solid rgba(220, 20, 60, 0.3);
+}
+
+/* Date Selection Section */
+.Setthedate {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.Setthedate label {
+    font-size: 1.1rem;
+    color: #1f2937;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.Setthedate input[type="date"] {
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #DC143C;
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.3s;
+    background: white;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.Setthedate input[type="date"]:focus {
+    border-color: #B22222;
+    box-shadow: 0 0 15px rgba(220, 20, 60, 0.3);
+    transform: scale(1.02);
+}
+
+.Setthedate button {
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #DC143C 0%, #8B0000 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.Setthedate button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(220, 20, 60, 0.5);
+    background: linear-gradient(135deg, #B22222 0%, #8B0000 100%);
+}
+
+.Setthedate button:active {
+    transform: translateY(-1px);
+}
+
+/* Timer Display Section */
+.timer {
+    background: linear-gradient(135deg, #DC143C 0%, #8B0000 100%);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(220, 20, 60, 0.4);
+}
+
+.timer h1 {
+    font-size: 3rem;
+    color: white;
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.timer-label {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 0.9rem;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Reset Button */
+#reset-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #DC143C 0%, #8B0000 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+#reset-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(220, 20, 60, 0.5);
+    background: linear-gradient(135deg, #B22222 0%, #8B0000 100%);
+}
+
+#reset-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Mobile Responsive - 768px */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .Timerapp {
+        padding: 25px;
+        max-width: 90%;
+    }
+
+    .timer h1 {
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+    }
+
+    #Motivation-Message {
+        right: 15px;
+        max-width: 250px;
+        padding: 15px 20px;
+        font-size: 0.9rem;
+    }
+
+    .Setthedate label {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile Responsive - 480px */
+@media (max-width: 480px) {
+    .Timerapp {
+        padding: 20px;
+    }
+
+    .timer {
+        padding: 20px;
+    }
+
+    .timer h1 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+
+    #Motivation-Message {
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        transform: none;
+        max-width: calc(100% - 20px);
+        font-size: 0.85rem;
+        padding: 12px 15px;
+    }
+
+    .Setthedate input[type="date"],
+    .Setthedate button,
+    #reset-btn {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+
+    .timer-label {
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+    }
+}
+
+/* Mobile Responsive - 360px */
+@media (max-width: 360px) {
+    .timer h1 {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+
+    #Motivation-Message {
+        font-size: 0.8rem;
+        padding: 10px 12px;
+    }
+
+    .Setthedate button,
+    #reset-btn {
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+}
